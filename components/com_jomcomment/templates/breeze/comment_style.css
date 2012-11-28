@@ -1,0 +1,338 @@
+div.comment-text
+{
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+div.voteReport{
+	background-color:#EEEEEE;
+	border:1px solid #CCCCCC;
+	padding: 3px;
+	/* left: 0px; */
+	right: 0px;
+	position: absolute;
+	text-align:center;
+	top: 25px;
+	display: none;
+	clear: both;
+}
+
+div.commentBlogView
+{
+	display:block;
+	text-align: right;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	margin-top: 4px;
+  	margin-bottom: 4px;
+	clear:both;
+}
+
+div.commentTools{
+	border-bottom:1px solid #BCBCBC;
+	height:18px;
+}
+
+div.jctools, div.show-comment, div.show-linkmore, div.show-hit, div.show-feed, div.show-report, div.show-voteup, div.show-votedown
+{
+	display:inline;
+	float:right;
+	height:18px;
+	text-indent: 24px;
+	margin-left: 4px;
+	margin-right: 4px;
+	background-repeat:no-repeat;
+	background-position: 0 50%;
+	background-image:url(images/comments.gif);
+}
+
+div.show-comment
+{
+	background-image:url(images/comments.gif);
+}
+
+div.show-linkmore
+{
+	background-image:url(images/page_go.gif);
+}
+
+div.show-hit{
+	background-image:url(images/chart_bar.gif);
+}
+
+div.show-feed
+{
+	width:18px;
+	background-image:none;
+}
+
+
+div.show-report{
+	background-image:url(images/comments_alert.gif);
+	height:14px;
+	cursor:pointer;
+}
+div.show-voteup{
+	background-image:url(images/comments_voteup.gif);
+	height:14px;
+	cursor:pointer;
+}
+div.show-votedown{
+	background-image:url(images/comments_votedown.gif);
+	height:14px;
+	cursor:pointer;
+}
+
+div.jcfav
+{
+	background-image:url(images/star.png);
+}
+
+div.jcshare
+{
+	background-image:url(images/share.png);
+}
+
+div.jcemail
+{
+	background-image:url(images/email.png);
+}
+
+
+.jomentry1, .jomentry2 {
+	border-bottom: 1px solid #ddd;
+	padding: 8px 4px;
+	background-repeat:repeat-x;
+	background-position:top;
+	position:relative;
+}
+
+.jomentry1 blockquote, .jomentry2 blockquote
+{
+	margin: 10px;
+	padding-left: 5px;
+	border-left: 5px solid #ddd;
+}
+
+.jomentry1
+{		
+		color:#000000;
+    background-color: #f2f2f2;
+    background-image:url(images/topshade1.gif);
+}
+.jomentry2 
+{
+		color:#000000;
+    background-color: #FFFFF2;
+    background-image:url(images/topshade2.gif);
+}
+
+.jomauthor
+{
+		color:inherit;
+    background-color: #F5F5C1;
+    border-bottom: 1px solid #FFDE00;
+    background-image:none;
+}
+
+#jc_commentsDiv blockquote
+{
+  color: #747474;
+	background-color:inherit;
+  padding-left: 30px;
+}
+
+
+#write_comment_title
+{
+	margin-top:14px;
+}
+
+.avatarImg
+{
+	padding: 2px;
+}
+
+.avatarImg img
+{
+	border:1px solid #ddd
+}
+
+#jc_name, #jc_website, #jc_email, #jc_title, #jc_comment, #jc_password
+{
+background:#EEF5F9 none repeat scroll 0%;
+border:1px solid #A3BDC8;
+margin-top:3px;
+padding:3px;
+}
+
+#jc_name, #jc_website, #jc_email, #jc_password
+{
+	width: 160px;
+	/*background:transparent url(images/postcomment.gif) no-repeat scroll left center;
+	padding-left:18px;*/
+	background-color:#EEF5F9 ;
+}
+
+#jc_commentForm
+{
+    padding-top: 2px;
+    padding-bottom: 6px;
+}
+
+
+#jc_commentForm label
+{
+}
+
+#jc_commentForm button, #jc_captchaImg
+{
+    margin-top: 6px;
+    margin-bottom: 4px;
+}
+
+/* Trackbacks */
+#trackback_link, #feed_link
+{
+	height:16px;
+	vertical-align:middle;
+	text-align:left;
+	cursor:pointer;
+	font-size:90%;
+}
+
+#trackback_link a, #feed_link a
+{
+	border-bottom:dashed 1px #CACACA;
+}
+
+#trackback_link img, #feed_link img
+{
+	vertical-align:middle;
+	padding-right:2px;
+	padding-left:2px;
+}
+
+#write_comment_heading
+{
+	margin-top:20px;
+	margin-bottom:30px;
+}
+
+
+.comment_action{
+	background-color:#EEEEEE;
+	border-color:#CCCCCC rgb(153, 153, 153) rgb(153, 153, 153) rgb(204, 204, 204);
+	border-style:solid;
+	border-width:1px;
+	color:#333333;
+	display:-moz-inline-box;
+	font-family:Tahoma,Arial,Helvetica;
+	font-size:100%;
+	margin:1px;
+/*	padding:2px; */
+	vertical-align:middle;
+	white-space:nowrap;
+	position:absolute;
+	right:0px;
+	top:0px;
+}
+
+#jc_commentForm label.subscribe{
+font-style:normal;
+font-weight:normal;
+}
+
+.postresponse, .viewresponses, div#trackback_title{
+clear:both;
+color:#779D03;
+font-family:Tahoma,Arial,sans-serif;
+font-size:140%;
+font-size-adjust:none;
+font-stretch:normal;
+font-style:normal;
+font-variant:normal;
+font-weight:normal;
+line-height:normal;
+margin:0px;
+padding:0px 0px 2px 20px;
+text-transform:none;
+}
+
+div#trackback_title{
+padding:0px 0px 2px 0px;
+}
+
+.viewresponses{
+padding:0px 0px 2px 0px;
+}
+.viewresponses img{
+padding-right:4px;
+}
+.postresponse{
+background:transparent url(images/postcomment.gif) no-repeat scroll left center;
+}
+
+.commentinfo{
+	position: relative;
+}
+
+.commentinfo cite {
+color:#5A8800;
+font-family:Tahoma,"Trebuchet MS",Arial;
+font-size:110%;
+font-size-adjust:none;
+font-stretch:normal;
+font-style:normal;
+font-variant:normal;
+font-weight:normal;
+line-height:normal;
+}
+
+.commentinfo span{
+font-size:85%;
+}
+
+.commentstext {
+font-family:Verdana,sans-serif;
+font-size:0.88em;
+margin:0pt 0pt 5px;
+padding:0pt;
+}
+.contenttr:hover{
+background-color:#EEF5F9;
+}
+.commententry{
+border-bottom:1px dotted #CCCCCC;
+display:block;
+height:1px;
+}
+
+#jc_commentForm .submitbutton {
+background:#587683 none repeat scroll 0%;
+border:medium none;
+color:#FFFFFF;
+font-family:Arial,Helvetica,sans-serif;
+font-size:12px;
+font-size-adjust:none;
+font-stretch:normal;
+font-style:normal;
+font-variant:normal;
+font-weight:bold;
+line-height:normal;
+padding:4px 12px;
+width:auto;
+cursor:pointer;
+}
+
+#jc_commentForm .submitbutton:hover {
+background:#779D03 none repeat scroll 0%;}
+
+#jc_commentFormDiv{
+background:transparent url(images/content-corner-bg.gif) no-repeat scroll left bottom;
+}
+
+#jc_commentForm label.subscribe, #jc_commentForm label.agree {
+font-style:normal;
+font-weight:normal;
+}

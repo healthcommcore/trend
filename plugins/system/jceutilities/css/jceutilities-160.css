@@ -1,0 +1,110 @@
+#jcelightbox-overlay {
+	position: absolute;
+	left: 0;
+	z-index: 10000;
+}
+#jcelightbox-center {
+	position: absolute;
+	left: 50%;
+	overflow: hidden;
+	background-color: #ffffff;
+	z-index: 10001;
+}
+#jcelightbox-loading {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	line-height: 0;
+	background: #ffffff url(../img/loading.gif) center 50% no-repeat;
+}
+#jcelightbox-image {
+	padding: 10px;
+}
+#jcelightbox-realimage {
+	border: 0px;
+	padding: 0px;
+	margin: 0px;
+}
+#jcelightbox-bottom {
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000;
+	line-height: 1.4em;
+	text-align: left;
+	border: 10px solid #fff;
+	border-top-style: none;
+	height: auto;
+}
+#jcelightbox-close {
+	display: block;
+	float: right;
+	width: 30px;
+	height: 30px;
+	background: transparent url(../img/close.gif) no-repeat center;
+	margin: 5px 0;
+}
+#jcelightbox-caption, #jcelightbox-number {
+	margin-right: 71px;
+}
+#jcelightbox-caption {
+	font-weight: bold;
+}
+#jcelightbox-nav {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+}
+
+#jcelightbox-nav a { 
+	outline: none;
+}
+#jcelightbox-navPrev, #jcelightbox-navNext {
+	width: 49%;
+	height: 100%;
+	background: transparent url(../img/blank.gif) no-repeat; /* Trick IE into showing hover */
+	display: block;
+}
+#jcelightbox-navPrev { 
+	left: 0;
+	float: left;
+}
+#jcelightbox-navNext { 
+	right: 0;
+	float: right;
+}
+#jcelightbox-navPrev:hover, #jcelightbox-navPrev:visited:hover { 
+	background: url(../img/prev.gif) left 15% no-repeat;
+}
+#jcelightbox-navNext:hover, #jcelightbox-navNext:visited:hover { 
+	background: url(../img/next.gif) right 15% no-repeat;
+}
+img.zoomLink {
+	vertical-align: middle;
+	border: 0;
+}
+img.zoomImg {
+	z-index: 10;
+	border: 0;
+	position: relative;
+}
+div.tooltip {
+	z-index: 10;
+	width: 180px;
+	text-align:left;
+	color: #000000;
+	background-color:#ffffff;
+	border:1px solid black;
+	padding: 4px;
+}
+div.tooltip h4 {
+	font-weight: bold;
+	font-size: 11px;
+	margin: 0px;
+}
+div.tooltip p {
+	font-size: 11px;
+}

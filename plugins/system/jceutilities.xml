@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5.0" type="plugin" group="system">
+	<name>System - JCE Utilities</name>
+	<author>Ryan Demmer</author>
+	<creationDate>29 March 2008</creationDate>
+	<copyright>(C) 2006-2008 Ryan Demmer. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>ryandemmer@gmail.com</authorEmail>
+	<authorUrl>www.cellardoor.za.net</authorUrl>
+	<version>1.6.0</version>
+	<description>
+	<![CDATA[
+	<p>A set of utitilites to convert and display existing mosCE/JCE, and new JCE popups (as of JCE 1.1) using a lightbox/thickbox method.</p>
+	<p>Inlcudes a tooltip function and a png fix option for IE.</p>
+	Usage : See this link -> <a href="http://www.cellardoor.za.net/index.php?option=com_content&task=view&id=32&Itemid=13" target="_blank">JCE Utilities Usage</a>
+	<br />
+	<p>CREDITS:<br />
+	Based on...<br />
+	Slimbox - http://www.digitalia.be/<br />
+	Thickbox 2.0 - Cody Lindley - http://www.codeylindley.com<br />
+	Everything else by me.</p>
+
+	<p>Uses JQuery - http://jquery.com for the DOM and FX magic!</p>	
+
+	<p>Should work with all modern browsers - FF 1.5 & 2.0, IE 6 & 7, Opera 9, Safari, Camino</p>
+	<br /><h3>Don't forget to publish JCE Utilities!</h3>
+	<br />
+	<strong>Changelog (from 1.5.0)</strong>
+	<ul>
+		<li><strong>Joomla! 1.5.0 version!</strong></li>
+		<li>Updated: XHTML Object methods updated for JCE 1.5.x</li>
+		<li>Updated: JQuery 1.2.3</li>
+		<li>Fixed: Zoom icon positioning fixed, finally, I think.</li>
+	</ul>
+	<br />
+	<strong>Changelog (from 1.4.0)</strong>
+	<ul>
+		<li>Added: Minor update to add inline activation, ie: onclick="return jcelightbox.trigger(this);" or onclick="return jcelightbox.trigger(url, title);".</li>
+		<li>Fixed: Rebuilt image popup div to better handle IE6 'quirks mode'.</li>
+		<li>Fixed: Zoom icon positioning fixed.</li>
+		<li>Added: New id and class names, new js file names.</li>
+	</ul>
+	]]>
+	</description>
+	<params>
+		<param name="convert" type="list" default="0" label="CONVERT OPTION" description="CONVERT OPTION DESC">
+ 			<option value="0">NO CONVERSION</option>
+ 			<option value="1">Lightbox/Slimbox</option>
+			<option value="2">Thickbox</option>
+			<option value="3">RokZoom</option>
+ 		</param>
+		<param name="imgpath" type="text" size="50" default="plugins/system/jceutilities/img/" label="IMAGE PATH" description="IMAGE PATH DESC"/>
+		<param name="fadespeed" type="text" default="500" label="FADE SPEED" description="FADE SPEED DESC"/>
+		<param name="scalespeed" type="text" default="500" label="SCALE SPEED" description="SCALE SPEED DESC"/>
+		<param name="overlayopacity" type="text" default="0.8" label="OVERLAY OPACITY" description="OVERLAY OPACITY DESC" />
+		<param name="overlaycolor" type="text" default="#000000" label="OVERLAY COLOR" description="OVERLAY COLOR DESC" />
+		<param name="resize" type="radio" default="1" label="RESIZE" description="RESIZE DESC">
+ 			<option value="1">YES</option>
+			<option value="0">NO</option>
+ 		</param>
+		<param name="icons" type="radio" default="1" label="ICONS" description="ICONS DESC">
+ 			<option value="1">YES</option>
+			<option value="0">NO</option>
+ 		</param>
+		<param type="spacer" />
+		<param name="tipclass" type="text" default="tooltip" label="TOOLTIP CLASS" description="TOOLTIP CLASS DESC"/>
+		<param name="tipopacity" type="text" default="1" label="TOOLTIP OPACITY" description="TOOLTIP OPACITY DESC"/>
+		<param name="tipspeed" type="text" default="150" label="TOOLTIP SPEED" description="TOOLTIP SPEED DESC"/>
+		<param name="tipposition" type="list" default="br" label="TOOLTIP POSITION" description="TOOLTIP POSITION DESC.">
+ 			<option value="tl">TOP LEFT</option>
+ 			<option value="tr">TOP RIGHT</option>
+			<option value="tc">TOP CENTRE</option>
+ 			<option value="bl">BOTTOM LEFT</option>
+			<option value="br">BOTTOM RIGHT</option>
+ 			<option value="bc">BOTTOM CENTRE</option>
+ 		</param>
+		<param name="tipoffsets_x" type="text" default="16" label="TOOLTIP X OFFSET" description="TOOLTIP X OFFSET DESC"/>
+		<param name="tipoffsets_y" type="text" default="16" label="TOOLTIP Y OFFSET" description="TOOLTIP Y OFFSET DESC"/>
+		<param name="pngfix" type="radio" default="0" label="PNG FIX" description="PNG FIX DESC">
+ 			<option value="1">YES</option>
+			<option value="0">NO</option>
+ 		</param>
+		<param name="jcexhtmlembed" type="radio" default="0" label="XHTML EMBED" description="XHTML EMBED DESC">
+ 			<option value="1">YES</option>
+			<option value="0">NO</option>
+ 		</param>
+	</params>
+	<files>
+		<filename plugin="jceutilities">jceutilities.php</filename>
+		<filename>jceutilities/index.html</filename>
+		<filename>jceutilities/js/index.html</filename>
+		<filename>jceutilities/js/jquery-123.js</filename>
+		<filename>jceutilities/js/jceutilities-160.js</filename>
+		<filename>jceutilities/js/jceutilities-160-src.js</filename>
+		<filename>jceutilities/js/embed.js</filename>
+		<filename>jceutilities/css/index.html</filename>
+		<filename>jceutilities/css/jceutilities-160.css</filename>
+		<filename>jceutilities/img/index.html</filename>
+		<filename>jceutilities/img/loading.gif</filename>
+		<filename>jceutilities/img/close.gif</filename>
+		<filename>jceutilities/img/prev.gif</filename>
+		<filename>jceutilities/img/next.gif</filename>
+		<filename>jceutilities/img/zoom-link.png</filename>
+		<filename>jceutilities/img/zoom-img.png</filename>
+		<filename>jceutilities/img/blank.gif</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_system_jceutilities.ini</language>
+	</languages>
+</install>

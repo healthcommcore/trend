@@ -1,0 +1,51 @@
+<?php if($debugview):?>
+<link href="comment_style.css" rel="stylesheet" type="text/css" />
+<?php endif;?>
+
+
+<?php if($comments) {?>
+<table width="100%" border="0" cellspacing="0" cellpadding="2">
+
+<!-- display each comment in a singlw row -->
+<?php foreach($comments as $comment): ?>
+<tr><td colspan="2"><span class="commententry"></span></td></tr>
+<tr>
+	<td colspan="2"></td>
+</tr>
+	<tr class="contenttr">
+	<td  valign="top" width="180">
+	<?php echo $comment->gravatar; ?>
+	<a name="comment-<?php echo $comment->id;?>" id="comment-<?php echo $comment->id;?>"></a>
+	
+	<div class="commentinfo"><cite><?php echo $comment->name; ?></cite>
+		<br/><span><?php echo $comment->date; ?></span>
+		<br/><span><?php echo $comment->ip; ?></span>
+	<?php if($votes){
+	?>
+		<br/><span>_JC_TPL_DISPLAY_VOTES <span id="cvote-<?PHP echo $comment->id;?>"><?php printf('%+d', $comment->voted);?></span></span>
+	<?php
+	}
+	?>
+	</div>
+	</td>
+	<td  valign="top">
+	<?php echo $comment->adminPanel; ?>
+	<div id="pc_<?php echo $comment->id; ?>">
+	<p class="commentstext"><?php echo $comment->comment; ?></p>
+	</div>
+	<div class="commentinfo" align="right">
+	<?php if($votes){ ?>
+		<div class="show-report" onclick="<?php echo $comment->onclick_report; ?>">_JC_TPL_ABUSE_REPORT</div>
+		<div class="show-votedown" onclick="<?php echo $comment->onclick_votedown; ?>">_JC_TPL_DOWN_VOTE</div>
+		<div class="show-voteup" onclick="<?php echo $comment->onclick_voteup; ?>">_JC_TPL_UP_VOTE</div>
+	<?php } ?>
+	</div>
+	</td>
+</tr>
+  
+
+<?php 
+endforeach; 
+echo '</table>';
+}
+?>

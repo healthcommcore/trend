@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.0" type="component">
+	<name>Email</name>
+	<author>Therese Lung (HCC)</author>
+	<creationDate>September 2008</creationDate>
+	<copyright>Copyright (C) 2008 DFCI.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>therese_lung@dfci.harvard.edu</authorEmail>
+	<authorUrl>www.dfci.org</authorUrl>
+	<version>1.0</version>
+	<description>Email component</description>
+	<files>
+	</files>
+</install>

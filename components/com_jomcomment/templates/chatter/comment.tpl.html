@@ -1,0 +1,59 @@
+<?php if($debugview):?>
+<link href="comment_style.css" rel="stylesheet" type="text/css" />
+<?php endif;?>
+
+<?php foreach($comments as $comment): ?>
+<?php
+if($comment->hidden) {
+// a lowly rated comment will be slightly hidden,
+?>
+<div class="<?php echo $comment->style; ?>" id="pc_<?php echo $comment->id; ?>" >
+<a name="comment-<?php echo $comment->id;?>" id="comment-<?php echo $comment->id;?>"></a>
+<b><?php echo $comment->title; ?></b><i>, _JC_LOW_VOTE</i> [<a href="javascript:void(0);" onclick="jax.call('jomcomment', 'jcxShowComment',<?php echo $comment->id; ?>);">_JC_SHOW_LOW_VOTE</a>]
+</div>
+<?php } else{?>
+<div class="<?php echo $comment->style; ?>" id="pc_<?php echo $comment->id; ?>" >
+<a name="comment-<?php echo $comment->id;?>" id="comment-<?php echo $comment->id;?>"></a>
+<?php echo $comment->adminPanel; ?>
+			<h4 class="CommentTitle">
+				<a id="author-<?php echo $comment->id; ?>" title="<?php echo $comment->name; ?>"><?php echo $comment->name; ?></a>
+				said:
+				<img src="images/spacer.gif" alt="" class="CommentArrow"  style="vertical-align:bottom;" />			</h4>
+				<div class="CommentText">
+					<div class="CommentText2">
+						<div class="CommentText3">
+						    <table width="98%" border="0" cellspacing="0" cellpadding="0">
+	                  <tr>
+	                      <td valign="top"><?php echo $comment->gravatar; ?></td>
+	                      <td width="100%" valign="top"  id="comment-text-container-<?php echo $comment->id; ?>">
+							  <?php echo $comment->comment; ?>
+							</td>
+	                  </tr>
+	                  <?php if($votes){ ?>
+	                  	<tr>
+	                  	<td>&nbsp;</td>
+	                  	<td>
+							<div class="show-report" onclick="<?php echo $comment->onclick_report; ?>">_JC_TPL_ABUSE_REPORT</div>
+							<div class="show-votedown" onclick="<?php echo $comment->onclick_votedown; ?>">_JC_TPL_DOWN_VOTE</div>
+							<div class="show-voteup" onclick="<?php echo $comment->onclick_voteup; ?>">_JC_TPL_UP_VOTE</div>
+						</td>
+						</tr>
+					<?php } ?>
+	                  
+	              </table>
+					    </div>
+					</div>		
+		</div>
+	<div class="CommentFooter">
+	<?php echo $comment->date; ?><?php if($comment->website):?> | <a href="<?php echo $comment->website; ?>" rel="nofollow" target="_blank"> url </a><?php endif;?><br />
+<?PHP
+	if($votes){
+?>
+	_JC_TPL_DISPLAY_VOTES <span id="cvote-<?PHP echo $comment->id;?>"><?PHP printf('%+d',$comment->voted);?></span>
+<?PHP
+	}
+?>
+</div>
+</div>
+<?php }
+endforeach; ?>
